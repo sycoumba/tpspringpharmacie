@@ -40,7 +40,7 @@ public class PharmacieService {
 		pharmaciedao.save(pharmacie);
 		return pharmaciedao.findAll();
 	}
-	@RequestMapping(value = "/liste/pharmacie",method = RequestMethod.PUT)
+	@RequestMapping(value = "/liste/pharmacie/update/{id}",method = RequestMethod.PUT)
 	public List<Pharmacie> update(@PathVariable int id, Pharmacie pharmacie){
 		pharmacie.setId(id);
 		pharmaciedao.save(pharmacie);
