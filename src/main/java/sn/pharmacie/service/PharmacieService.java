@@ -22,7 +22,7 @@ public class PharmacieService {
 	}
 	@RequestMapping(value = "/liste/pharmacie/{ville}",method = RequestMethod.GET)
 	public List<Pharmacie>getAllPharmacieByVille(@PathVariable String ville){
-		return pharmaciedao.getAllPharmacieByVille(ville);
+		return pharmaciedao.getAllPharmacieByVille(ville.toString());
 	}
 	@RequestMapping(value = "/liste/pharmacie/{quartier}",method = RequestMethod.GET)
 	public List<Pharmacie>getAllPharmacieByQartier(@PathVariable String quartier){
